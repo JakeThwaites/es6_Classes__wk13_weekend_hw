@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const familyContainer = document.querySelector('div#instrument-family');
   // InstrumentFamilyView.bindEvents(familyContainer)
 
-  const instrumentFamilyView = new InstrumentFamilyView(familyContainer);
-  instrumentFamilyView.bindEvents();
+  // const instrumentFamilyView = new InstrumentFamilyView(familyContainer);
+  InstrumentFamilyView.bindEvents(familyContainer);
 
   InstrumentFamilies.bindEvents(data);
 });
