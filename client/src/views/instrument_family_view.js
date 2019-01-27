@@ -32,19 +32,19 @@ class InstrumentFamilyView {
       return element;
   }
 
-  static render(family){
+  static render({name, description, instruments}){
     this.container.innerHTML = '';
 
-    const familyName = InstrumentFamilyView.createElement('h2', family.name);
+    const familyName = InstrumentFamilyView.createElement('h2', name);
     this.container.appendChild(familyName);
 
-    const familyDescription = InstrumentFamilyView.createElement('p', family.description);
+    const familyDescription = InstrumentFamilyView.createElement('p', description);
     this.container.appendChild(familyDescription);
 
     const instrumentListTitle = InstrumentFamilyView.createElement('h3', 'Instruments include:');
     this.container.appendChild(instrumentListTitle);
 
-    const instrumentList = InstrumentFamilyView.createInstrumentList(family.instruments);
+    const instrumentList = InstrumentFamilyView.createInstrumentList(instruments);
     this.container.appendChild(instrumentList);
   }
 
